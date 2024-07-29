@@ -117,6 +117,7 @@
     height: 90vh;
     width: 100%;
     position: relative;
+    background-color: whitesmoke;
 }
 .comdd{
     width: 80%;
@@ -269,30 +270,113 @@
 .trendm{
     width: 100%;
     height: 35vh;
-    background-color: aqua;
+    background-color: whitesmoke;
 }
 .trend{
     width: 80%;
     height: 100%;
     margin: 0 10%;
-    background-color: antiquewhite;
 }
 .thd{
     width: 100%;
     height: 15%;
-    background-color: saddlebrown;
 }
 .trbd{
-    display: flex;
     width: 100%;
     height: 85%;
-    background-color: rgb(223, 187, 162);
 }
 .trs{
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    height: 50%;
+    
+}
+.trs1{
+    width: auto;
+    height: 50px;
+    margin-right: 15px;
+    padding: 10px 45px 5px 5px;
+    background-color: white;
+}
+.trss{
+    display: flex;
+    width: 100%;
+    height: 50%;
+}
+.trs2{
+    width: auto;
+    height: 50px;
+    margin-right: 15px;
+    padding: 10px 45px 5px 5px;
+    background-color: white;
+}
+.footer{
+    width: 100%;
+    height: 150vh;
+    background-color: rgb(45, 45, 45);
+}
+.liys{
+    height: 10%;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.liysl{
+    width: 75%;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.liysr{
+    width: 13%;
+    height: 100%;
     display: flex;
     justify-content: center;
-    border: 1px solid black;
-    width: auto;
-    height: 60px;
-    padding: 5px 10px 5px 5px;
+    align-items: center;
+}
+.cus{
+    height: 18%;
+    width: 100%;
+    color: rgb(176, 177, 178);
+    background-color: rgb(40, 40, 40);
+    
+}
+.cus ul{
+    height: 100%;
+    list-style-type: none;
+    text-align: center;
+    font-size: 12px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.cus img{
+    width: 65px;
+    height: 65px;
+}
+.texth{
+    height: 45%;
+    width: 80%;
+    margin: 0 10%;
+    color: rgb(176, 177, 178);
+}
+.tlf{
+    height: 3%;
+}
+.tmt, .tmc{
+    margin: 10px 0px;
+}
+.tpf img{
+    height: 35px;
+    width: 35px;
+}
+.para{
+    width: 50%;
+    margin: 0 25%;
+    font-size: 14px;
 }
