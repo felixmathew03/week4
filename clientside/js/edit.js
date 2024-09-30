@@ -9,22 +9,23 @@ async function getMovie() {
     picture=movie.picture;
     document.getElementById("frm").innerHTML=`
     <label for="title">Movie Title:</label>
-            <input type="text" id="title" name="title" value=${movie.title}>
+            <input type="text" id="title" name="title" value="${movie.title}">
 
             <label for="duration">Duration (in minutes):</label>
-            <input type="number" id="duration" name="duration" value=${movie.duration}>
+            <input type="number" id="duration" name="duration" value="${movie.duration}">
 
             <label for="genre">Genre:</label>
-            <input type="text" id="genre" name="genre" value=${movie.genre}>
+            <input type="text" id="genre" name="genre" value="${movie.genre}">
 
             <label for="release-date">Release Date:</label>
-            <input type="date" id="releaseDate" name="releaseDate" value=${movie.releaseDate}>
+            <input type="date" id="releaseDate" name="releaseDate" value="${movie.releaseDate}">
 
             <label for="language">Language:</label>
-            <input type="text" id="language" name="language" value=${movie.language}>
+            <input type="text" id="language" name="language" value="${movie.language}">
 
             <label for="certification">Certification:</label>
-            <select id="certification" name="certification" value=${movie.certification}>
+            <select id="certification" name="certification" value="${movie.certification}">
+                <option value="${movie.certification}">${movie.certification}</option>
                 <option value="U">U</option>
                 <option value="UA">UA</option>
                 <option value="A">A</option>
@@ -32,7 +33,7 @@ async function getMovie() {
             </select>
 
             <label for="picture">Picture:</label>
-            <input type="file" id="picture" name="picture" accept="image/*" value=${movie.picture}>
+            <input type="file" id="picture" name="picture" accept="image/*" onchange="pic()">
 
             <button type="submit">Submit</button>
     `;
@@ -43,7 +44,7 @@ document.getElementById("frm").addEventListener("submit",async(e)=>{
     e.preventDefault();
     try {
         const title=document.getElementById("title").value;
-    const duration=document.getElementById("duration").value;
+    const duration=parseInt(document.getElementById("duration").value);
     const genre=document.getElementById("genre").value;
     const releaseDate=document.getElementById("releaseDate").value;
     const language=document.getElementById("language").value;

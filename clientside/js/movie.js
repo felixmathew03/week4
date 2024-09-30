@@ -15,7 +15,7 @@ async function getMovie() {
     document.getElementById("date").textContent=movie.releaseDate;
     document.getElementById("buttons").innerHTML=`
     <a href="../pages/edit.html?id=${movie._id}"><button id="edit">Edit</button></a>
-                        <button onclick="deleteMovie('${movie._id}')" id="delete">Delete</button>`
+    <button onclick="deleteMovie('${movie._id}')" id="delete" >Delete</button>`
 }
 getMovie();
 function timeConvert(n) {

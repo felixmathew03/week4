@@ -2,7 +2,7 @@ let picture
 document.getElementById("frm").addEventListener("submit",async(e)=>{
     e.preventDefault();
     const title=document.getElementById("title").value;
-    const duration=document.getElementById("duration").value;
+    const duration=parseInt(document.getElementById("duration").value);
     const genre=document.getElementById("genre").value;
     const releaseDate=document.getElementById("releaseDate").value;
     const language=document.getElementById("language").value;
