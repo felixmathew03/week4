@@ -6,15 +6,22 @@ async function getMovies() {
     movies.map((movie)=>{
         str+=`
         <div class="movie">
-                    <div class="mimg">
+            <a href="./movie.html?id=${movie._id}">
+            <div class="mimg">
                         <img src="${movie.picture}" alt="">
                     </div>
                     <h3>${movie.title}</h3>
                     <p>${movie.certification}</p>
                     <p>${movie.language}</p>
+            </a>
+                    
         </div>
         `
     });
     document.getElementById("movies").innerHTML=str;
 }
 getMovies();
+
+
+
+  

@@ -186,12 +186,12 @@ object-fit: cover;
 .bimg{
     width: 100%;
     height: 60vh;
-    background-image: url("../img/deadpool-and-wolverine-et00341295-1718018322.jpg");
+    
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     color: white;
-    background-color: rgb(46, 45, 45);
+    background-color: rgb(39, 38, 38);
 }
 .bimg1{
     height: 100%;
@@ -233,10 +233,97 @@ object-fit: cover;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
+.title{
+    height: 70%;
+}
+.title h1{
+    margin-bottom: 1%;
+}
+#screen,#language{
+    padding: 2%;
+    background-color: rgb(235, 234, 234);
+    color: black;
+    margin: 2% 0;
+    border-radius: 4px;
+}
+.buttons{
+    margin-top: 2%;
+
+}
+.buttons button{
+    padding: 1.8% 5%;
+    margin-right: 2%;
+    border-radius: 4px;
+    
+}
+#edit{
+    color: rgb(89, 89, 240);
+    border: 2px solid rgb(89, 89, 240);
+    transition: 0.5s;
+}
+#edit:hover{
+    background-color: rgb(89, 89, 240);
+    color: aliceblue;
+}
+#delete{
+    color: rgb(224, 84, 76);
+    border: 2px solid rgb(224, 84, 76);
+    transition: 0.5s;
+}
+#delete:hover{
+    background-color:  rgb(224, 84, 76);
+    color: aliceblue;
+}
 .bimgr{
     display: flex;
     justify-content: end;
     align-items: start;
+    width: 20%;
+}
+.comd{
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    background-color: whitesmoke;
+}
+.comdd{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.cdh{
+    width: 100%;
+    height: 8%;
+}
+.cdb{
+    width: 100%;
+    height: 92%;
+    display: flex;
+    
+}
+.cdbf{
+    width: 20%;
+    height: 100%;
+    font-size: 18px;
+    margin-right: 2%;
+}
+.cid{
+    height: 80%;
+    width: 100%;
+    border-radius: 15px;
+}
+.cimg{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+.cimg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
 }
 .abou{
     height: 10vh;
