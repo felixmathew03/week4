@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Enter Movie Details</h1>
-        <form id="frm" method="POST" enctype="multipart/form-data">
+        <form id="frm" method="POST" >
             <label for="title">Movie Title:</label>
             <input type="text" id="title" name="title" >
 
@@ -25,6 +25,9 @@
             <label for="language">Language:</label>
             <input type="text" id="language" name="language" >
 
+            <label for="format">Format:</label>
+            <input type="text" id="format" name="format" >
+
             <label for="certification">Certification:</label>
             <select id="certification" name="certification" >
                 <option value="U">U</option>
@@ -36,7 +39,7 @@
             <label for="picture">Picture:</label>
             <input type="file" id="picture" name="picture"  >
 
-            <label for="picture">Banner:</label>
+            <label for="banner">Banner:</label>
             <input type="file" id="banner" name="picture"  >
 
             <button type="submit">Submit</button>

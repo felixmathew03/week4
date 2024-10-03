@@ -7,22 +7,21 @@ document.getElementById("frm").addEventListener("submit",async(e)=>{
     const genre=document.getElementById("genre").value;
     const releaseDate=document.getElementById("releaseDate").value;
     const language=document.getElementById("language").value;
+    const format=document.getElementById("format").value;
     const certification=document.getElementById("certification").value;
     fetch("http://localhost:3000/api/addmovie",{
         method:"POST",
         headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({title,duration,genre,releaseDate,language,certification,picture,banner})
+        body:JSON.stringify({title,duration,genre,releaseDate,language,format,certification,picture,banner})
     }).then(async (res)=>{
         console.log(res);
         if(res.status==201){
             alert("success");
-            window.location.href="../index.html"
+            window.location.href="../pages/movies.html"
         }
         else if(res.status==404){
             const data=await res.json();
-            
             alert(data.msg);
-            window.location.href="../index.html"
         }
         else{
             alert("error")
