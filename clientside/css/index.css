@@ -61,7 +61,7 @@ body{
 .nav1m button{
     padding: 5% 10%;
     border: none;
-    background-color: rgb(248, 78, 78);
+    background-color: rgb(214, 21, 21);
     color: aliceblue;
     border-radius: 4px;
 }
@@ -88,6 +88,27 @@ body{
     justify-content: space-between;
     margin: 0 10%;
 }
+.nav2 ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffeb3b; /* Underline color */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav2 ul li:hover::after {
+    width: 100%;
+}
+
+.nav2 ul li:hover {
+    color: red;
+    transform: translateY(-3px);
+}
+
 .nav2l{
     width: 29%;
     height: 100%;
@@ -97,6 +118,9 @@ body{
 .nav2l a{
     color: black;
     text-decoration: none;
+}
+.nav2l a:hover{
+    color: red;
 }
 .nav2r{
     width: 24%;

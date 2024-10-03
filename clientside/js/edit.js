@@ -33,7 +33,10 @@ async function getMovie() {
             </select>
 
             <label for="picture">Picture:</label>
-            <input type="file" id="picture" name="picture" accept="image/*" onchange="pic()">
+            <input type="file" id="picture" name="picture" onchange="pic('picture')">
+
+            <label for="banner">Banner:</label>
+            <input type="file" id="banner" name="banner" onchange="pic('banner')">
 
             <button type="submit">Submit</button>
     `;
@@ -52,11 +55,11 @@ document.getElementById("frm").addEventListener("submit",async(e)=>{
     const res=await fetch(`http://localhost:3000/api/editmovie/${id}`,{
         method:"PUT",
         headers:{"Content-Type":"application/json"},
-        body:JSON.stringify({title,duration,genre,releaseDate,language,certification,picture})
+        body:JSON.stringify({title,duration,genre,releaseDate,language,certification,picture,banner})
     })
     if(res.status==201){
         alert("Updated")
-        window.location.href="../index.html"
+        window.location.href="../pages/movies.html"
     }else{
         alert("error")
     }
@@ -66,9 +69,16 @@ document.getElementById("frm").addEventListener("submit",async(e)=>{
     }
 })
 
-async function pic(){
-    console.log(document.getElementById("picture").files[0]);
-    picture=await convertToBase64(document.getElementById("picture").files[0]);
+async function pic(c){
+    console.log(c);
+    if(c=="picture"){
+        picture=await convertToBase64(document.getElementById("picture").files[0]);
+        console.log(picture);     
+    }else{
+        banner=await convertToBase64(document.getElementById("banner").files[0]);
+        console.log(banner);
+    }
+
 }
 function convertToBase64(file) {
     return new Promise((resolve,reject)=>{

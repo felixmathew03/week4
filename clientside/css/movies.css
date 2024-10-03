@@ -28,6 +28,33 @@ align-items: center;
 justify-content: space-between;
 
 }
+.nav2 ul li::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffeb3b; /* Underline color */
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.nav2 ul li:hover::after {
+    width: 100%;
+}
+
+.nav2 ul li:hover {
+    color: red;
+    transform: translateY(-3px);
+}
+.nav2l a{
+    color: black;
+    text-decoration: none;
+}
+.nav2l a:hover{
+    color: red;
+}
 .nlogo{
 width: 20%;
 }.nlogo img{
@@ -100,10 +127,7 @@ height: 100%;
 font-size: 14px;
 font-weight: lighter;
 }
-.nav2l a{
-color: black;
-text-decoration: none;
-}
+
 .nav2r{
 width: 24%;
 height: 100%;

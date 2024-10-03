@@ -12,6 +12,9 @@ export async function getMovies(req,res) {
 export async function addMovie(req,res){
     try{
         const{...movie}=req.body;
+        const {title,duration,genre,releaseDate,language,certification,picture,banner}=req.body
+        if(!(title&&duration&&genre&&releaseDate&&language&&certification&&picture&&banner))
+            return res.status(404).send({msg:"Empty fields"})
         const data=await movieSchema.create({...movie});
         return res.status(201).send({msg:data});
         
