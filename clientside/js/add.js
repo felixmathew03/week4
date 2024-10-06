@@ -34,9 +34,12 @@ document.getElementById("frm").addEventListener("submit",async(e)=>{
 })
 document.getElementById("picture").addEventListener("change",async(e)=>{
     picture=await convertToBase64(document.getElementById("picture").files[0]);
+    document.getElementById("picture2").src=picture;
 })
 document.getElementById("banner").addEventListener("change",async(e)=>{
     banner=await convertToBase64(document.getElementById("banner").files[0]);
+    document.getElementById("picture4").src=banner;
+
 })
 function convertToBase64(file) {
     return new Promise((resolve,reject)=>{

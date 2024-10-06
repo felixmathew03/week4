@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 60%;
     margin: 50px auto;
     padding: 20px;
     background-color: #fff;
@@ -64,4 +64,23 @@ button {
 
 button:hover {
     background-color: #c50712; /* Darker red */
+}
+.main{
+    display: flex;
+    
+}
+.left{
+    width: 35%;
+    margin-right: 5%;
+}
+.right{
+    width: 60%;
+}
+#picture1 img{
+    width: 150px;
+    height: 200px;
+}
+#picture3 img{
+    width: 100%;
+    
 }

@@ -10,6 +10,8 @@
     <div class="container">
         <h1>Enter Movie Details</h1>
         <form id="frm" method="POST" >
+            <div class="main">
+                <div class="left"> 
             <label for="title">Movie Title:</label>
             <input type="text" id="title" name="title" >
 
@@ -36,13 +38,23 @@
                 <option value="S">S</option>
             </select>
 
+        </div>
+        <div class="right">
             <label for="picture">Picture:</label>
             <input type="file" id="picture" name="picture"  >
-
+            <div id="picture1">
+                <img src="" alt="" id="picture2">
+            </div>
             <label for="banner">Banner:</label>
             <input type="file" id="banner" name="picture"  >
-
+            <div id="picture3">
+                <img src="" alt="" id="picture4">
+            </div>
+        </div>
+    </div>
+    <div class="foot">
             <button type="submit">Submit</button>
+    </div>
         </form>
     </div>
     <script src="../js/add.js"></script>

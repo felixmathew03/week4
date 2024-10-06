@@ -10,6 +10,8 @@ async function getMovie() {
     picture=movie.picture;
     banner=movie.banner
     document.getElementById("frm").innerHTML=`
+    <div class="main">
+    <div class="left"> 
     <label for="title">Movie Title:</label>
             <input type="text" id="title" name="title" value="${movie.title}">
 
@@ -21,29 +23,38 @@ async function getMovie() {
 
             <label for="release-date">Release Date:</label>
             <input type="date" id="releaseDate" name="releaseDate" value="${movie.releaseDate}">
-
             <label for="language">Language:</label>
             <input type="text" id="language" name="language" value="${movie.language}">
-
+            
             <label for="format">Format:</label>
             <input type="text" id="format" name="format" value="${movie.format}">
-
+            
             <label for="certification">Certification:</label>
             <select id="certification" name="certification" value="${movie.certification}">
-                <option value="${movie.certification}">${movie.certification}</option>
-                <option value="U">U</option>
-                <option value="UA">UA</option>
-                <option value="A">A</option>
-                <option value="S">S</option>
+            <option value="${movie.certification}">${movie.certification}</option>
+            <option value="U">U</option>
+            <option value="UA">UA</option>
+            <option value="A">A</option>
+            <option value="S">S</option>
             </select>
-
+            </div>
+                    <div class="right">
+            
             <label for="picture">Picture:</label>
             <input type="file" id="picture" name="picture" onchange="pic('picture')">
-
+            <div id="picture1">
+                <img src="${picture}" alt="" id="picture2">
+            </div>
             <label for="banner">Banner:</label>
             <input type="file" id="banner" name="banner" onchange="pic('banner')">
-
+            <div id="picture3">
+                <img src="${banner}" alt="" id="picture4">
+            </div>
+        </div>
+    </div>
+    <div class="foot">
             <button type="submit">Submit</button>
+    </div>
     `;
 }
 getMovie();
@@ -84,11 +95,12 @@ document.getElementById("frm").addEventListener("submit",async(e)=>{
 async function pic(c){
     console.log(c);
     if(c=="picture"){
-        picture=await convertToBase64(document.getElementById("picture").files[0]);
-        console.log(picture);     
+        picture=await convertToBase64(document.getElementById("picture").files[0]);   
+        document.getElementById("picture2").src=picture;
     }else{
         banner=await convertToBase64(document.getElementById("banner").files[0]);
-        console.log(banner);
+        document.getElementById("picture4").src=banner;
+
     }
 
 }
